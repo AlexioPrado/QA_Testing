@@ -1,1 +1,78 @@
+Game Being Tested: BlackJack
+Dev Team: Samuel, Jessica, Karan, Maxwell - mcnoffersinger/BlackJack
+QA Team: Christopher, Afton, Angel, Marcus
+Date: 2/10/2026
 
+Game Type: Card game
+
+Core Mechanics:
+Player can Stand or Hit each round to play BlackJack
+Full Deck of cards is simulated to correctly deal random cards
+Player can customize their bet at the start of each round
+Pygame visuals (if we can get it to work)
+Player can select AI difficulty and unlock extra cards by playing rounds.
+Russian roulette mode
+
+Win Condition: 
+If the user gets a hand with the value of 21
+If the user gets a hand with a value higher than the dealer but not over 21
+The player gains the amount of money they bet and can play again
+Lose Condition: 
+If the user gets a hand over the value of 21
+If the player gets a hand with a value lower than the dealer and the dealer's value is not over 21
+The player loses the amount of money they bet and are shown the loss screen.
+
+Player Inputs: User will only use their mouse clicker to make descisions during the game.
+
+Testing Strategy
+Tuesday: 
+Goal: Define all probable bugs, Test three bugs then move on so we can get to the other games
+Test Scenarios: 
+No check to prohibit bets if you have no money
+No money makes the minus button add $10 to bet.
+Spamming the hit or stand button when in Russian mode closes the game
+Known: issue found today:
+When you have no money you can still bet.
+When you have no money clicking the minus on bet sets the bet to $10 thus increasing the bet. After this clicking the plus button reverts the bet back to $0 thus decreasing the bet.
+Selecting Russian mode and spamming the hit or stand button causes the game to close. This soft-locks you.
+
+Wednesday:
+Goal:
+Test Scenarios: 
+Known Issues:
+
+Thursday:
+Goal: 
+Test Scenarios:
+Known Issues:
+
+Friday:
+Goal:
+Test Scenarios:
+Known Issues:
+
+Bug Categories
+By Severity
+By Type
+
+Summary Table
+( Have to insert an image)
+
+Notes
+Testing Environment: Pygame
+Any blockers or issues with the game code itself? [If the game won't run, note it here]
+Assumptions: [Anything unclear about how the game should work? Note it for the dev team]
+
+Recommendations for Dev Team
+Critical bugs to fix first:
+Betting on Russian mode soft locks you, as any repeated input will crash the game.
+
+High-priority fixes:
+
+Nice-to-have fixes: [Lower priority issues]
+Make it so you can’t bet money you don't have.
+Make it so that when you have no money, you can’t set the bet to $10 by clicking the minus bet button.
+
+Testing completed by: Christopher Markham
+
+Date submitted: 2/13/2025
