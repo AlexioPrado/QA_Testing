@@ -1,4 +1,4 @@
-STANDUP NOTES — Sprint 2 Day 1 (Feb 10th, Tuesday)
+STANDUP NOTES — Sprint pt.2 Day 1 (Feb 10th, Tuesday)
 
 Attendance:
 - Afton — ABSENT
@@ -9,21 +9,21 @@ Attendance:
 Stand up:
 Afton:
 - What I did: Was not here
-- What I’m doing: Accepting repo invention and help bug report page syntax
+- What I’m doing: Accepting repo invention and help with the QA_TESTING_PLAN.txt file
 - Blocked: not present
 
 Christopher:
-- What I did: Started testing for bugs in Echo of Terminal 7 and Christopher-Rise-Of-Mark-Ham games
+- What I did: Started testing for bugs in Echo of Terminal 7 and Christopher-Rise-Of-Mark-Ham games, and edited the QA_TESTING_PLAN.txt file in docs
 - What I’m doing: Finishing testing the rest of the games and writing down the bugs
 - Blocked: Hard to run the games, they are done with pygame
 
 Angel:
-- What I did: Edit STANDUP_NOTES.txt and QA_TESTING_PLAN.txt files
+- What I did: Edit STANDUP_NOTES.txt and QA_TESTING_PLAN.txt files and added them to GitHub
 - What I’m doing: Making sure that the data we get is syntaxed correctly.
 - Blocked: Hard to run the games, they are done with pygame
 
 Marcus:
-- What I did: Edit the QA_TESTING_PLAN.txt file and started testing for bugs in the fshng game
+- What I did: Edit the QA_TESTING_PLAN.txt file and fixed its syntax in docs, and started testing for bugs in the fshng game
 - What I’m doing: Finishing testing the rest of the games and writing down the bugs. Make sure that the data we get is syntaxed correctly.
 - Blocked: Hard to run the games, they are done with pygame
 
