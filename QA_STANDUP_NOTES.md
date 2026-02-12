@@ -100,29 +100,25 @@ Attendance:
   
 Stand up:
 Afton:
-- What I did:
-- What I’m doing:
-- Blocked:
+- What I did: Completed Echo of Terminal 7 and Black Jack formatting of Testing and Summary Report
+- What I’m doing: Black Jack testing and Summary
+- Blocked: None
 
 Christopher:
-- What I did:
-- What I’m doing: 
-- Blocked:
+- What I did: Completed Echo of Terminal 7 and Black Jack formatting of Testing and Summary Report
+- What I’m doing:  Black Jack testing and Summary
+- Blocked: None
 
 Angel:
-- What I did:
-- What I’m doing:
-- Blocked:
+- What I did: Completed formatting of summary report of every game and added to github
+- What I’m doing: Continuing README File
+- Blocked: None
 
 Marcus:
-- What I did: 
-- What I’m doing: 
-- Blocked:
+- What I did: Completed formatting of testing plan of every game and updated standup notes(for the day). Added both to github
+- What I’m doing: Stand up notes formatting
+- Blocked: None
 
 Test Lead Notes: 
-- 4 Bugs Total
-- Bugs found:
-  - Christopher: The Rise of Mark-Ham
-
-  - Fshng
-
+- 0 Bugs Total
+- Game bugs finalized 
