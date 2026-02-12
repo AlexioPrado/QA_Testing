@@ -1,1 +1,490 @@
+Game Tested: Christopher: The Rise of Mark-Ham
+Dev Team: Gabe, Rahul, Huzaifah, Troy- Gcc07/Christofer-Rise-Of-Mark-Ham/repo
+QA Team: [Angel, Afton, Christopher, Marcus]
+Testing Period: Week 2 
+Report Date: 2/10/2026
 
+Executive Summary
+Over 2 days we conducted a comprehensive QA testing of the game Christopher. Our team tested all core features and found a total of 8 issues.
+
+Key Finding: There seems to be no validation for invalid input in multiple areas.
+
+Testing Overview
+What We Tested
+
+  Happy path (normal gameplay) ✓
+  Input validation & edge cases ✓
+    - Tested numbers around the valid number inputs
+    - Tested random characters
+  Win/lose conditions ✓
+    - Tested dying and winning
+  State management ✓
+  Complex scenarios & sequences ✓
+
+Coverage Summary
+Features Tested:
+  - User input validation: 90%
+  - Using items: 70% tested
+  - Adjusting settings: 100%
+
+Test Types:
+  Functional testing (does it work?)
+    - Yes
+  Negative testing (what breaks it?)
+    - Out of bounds input
+    - Spamming
+  Boundary testing (edge values)
+    - Out of bounds input
+    - spamming
+  Exploratory testing (creative scenarios)
+  - Setting text speed to 0
+
+Bug Summary 
+By Severity -
+Critical: [2] bugs 
+  - Using an item you don't have / Out of range 
+  - Negative text speed crashes the game 
+High: [2] bugs 
+  - Spamming input while text is displayed affects the next input checks
+Medium: [1] bugs
+  - Entering invalid inputs outside the range of valid inputs 
+Low: [3] bugs 
+  - High text speed makes dialogue speed slower 
+  - Moon Blessing color changing 
+  - Text speed setting is not consistent throughout game 
+
+Total Bugs Filed: [8]
+
+By Category - 
+Input Validation: [3] bugs
+Logic Errors: [2] bugs
+State Management: [0] bugs
+UI/UX Issues: [2] bugs
+Other: [0] bugs
+
+Critical Issues (Must Fix Before Handoff)
+  - Using an item you don't have / Out of range 
+  - Negative text speed crashes the game 
+High-Priority Issues (Fix ASAP)
+  - Spamming input while text is displayed affects the next input checks 
+Medium & Low Priority Issues
+  - Entering invalid inputs outside the range of valid inputs 
+  - High text speed makes dialogue speed slower 
+  - Moon Blessing color changing 
+  - Text speed setting is not consistent throughout game 
+
+Testing Insights
+
+What Worked Well:
+  - Attack feature
+  - Text color
+Areas for Improvement
+  - Text speed
+Patterns Noticed
+  - Bugs did not seem to cluster
+
+Recommendations for Dev Team
+Critical Fixes (Priority 1)
+  - Using an item you don't have / Out of range
+  - Entering invalid inputs outside the range of valid inputs
+  - Spamming input while text is displayed affects the next input checks
+Important Fixes (Priority 2)
+  - Negative text speed crashes the game 
+  - Text speed setting is not consistent throughout game
+Polish/Optional Fixes (Priority 3)
+  - High text speed makes dialogue speed slower 
+  - Moon Blessing color changing
+
+Test Environment
+Platform: Java Terminal
+Game Version: 2/9/2026
+Testing Tools: Manual testing + GitHub Issues
+
+All GitHub Issues
+Complete list of filed bugs: See dev team repo for all open GitHub Issues tagged qa-week6
+
+Total: 4
+
+Multiple issues with switch statements unintentionally bleeding into one another due to the lack of a break; (FIXED) 
+
+Code reference was causing player to gain enemyHP as markpoints due to incorrect variable assignment (FIXED) 
+
+Calculate max enemies logic allowed for an extra enemy in contrast to the provided max because >= was used instead of > (FIXED) 
+
+If you flee on the final boss, (and possibly other enemies?) They will simply dissapear. (NOT FIXED)
+
+Conclusion
+The game has 8 documented issues ranging from critical to cosmetic. With focused effort on critical bugs, the core gameplay loop is playable. Input validation and text speed are the areas needing most attention.
+
+QA Team Sign-Off
+Test Lead: Aften Pate
+Submitted: 2/11/2026
+Team Members: Christopher, Afton, Angel, Marcus
+
+Appendix: Detailed Test Scenarios
+
+Scenario 1: Trying to play the game
+Result: [Passed]
+Notes: The code can detect valid input
+
+Scenario 2: Input 3 on the main menu
+Result: [Failed]
+Notes: There are holes in the data validation
+
+Scenario 3: input -1 on text
+Result: [Passed / Failed]
+Notes: Caused a crash when playing the game
+
+Questions for Dev Team (If Applicable)
+If there were ambiguities in how the game should work, note them here so dev team can clarify in Week 7:
+- None
+________________________________________________________________________________________________________________________________________________________________________________
+Game Tested: Fshng
+Dev Team: Evan Yango, Marcus Ceradini, Bianca Baccay, Ayah Abdalla, Maddy Puryear
+QA Team: [Angel, Afton, Christopher, Marcus]
+Testing Period: Week 2 
+Report Date: 2/11/2026
+
+Executive Summary
+Over 2 days we conducted a comprehensive QA testing of the game Fshng. Our team tested all core features and found a total of 4 issues.
+
+Key Finding: The round does not start and 2 or lose condition. Also sometimes the fishes fly to the right when you retrieve the rod.
+
+Testing Overview
+What We Tested
+  - What number the round starts at
+  - If the visual look weird
+  - No lose condition or win condition
+
+Coverage Summary
+  Features Tested: [List core features and % coverage]
+  Feature 1 (Casting rod): 100% tested
+  Feature 2 (amount of fish you can catch): 70% tested
+  Test Types: Visuals and functionality
+  Functional testing:
+    - The game is able to throw the rod and catch the fish. However, there is no ending. 
+  Negative testing:
+    - The fish and the rod fly to the right and you can’t pick up anymore fish after 10. These errors do not happen consistently. 
+  Exploratory testing
+    - If you pick up no fish nothing happens.
+    - If you try to play without the cursor on the screen it does not work.
+
+Bug Summary
+By Severity:
+Low: [4] bugs 
+  - Sometimes the fish run off the screen
+  - The game does not start and round 1
+  - Don’t know the weight so we can check the weight increase
+  - Weight of Fish is not indicated (QoL)
+Total Bugs Filed: [4]
+
+By Category:
+  Input Validation: [0] bugs
+  Logic Errors: [1] bugs
+  State Management: [0] bugs
+  UI/UX Issues: [1] bugs
+  Other: [2] bugs
+
+Medium & Low Priority Issues
+All bugs found are low priority and are not necessary to be done immediately
+
+Testing Insights
+What Worked Well
+  - The base functions of the game works but has none game altering errors
+Areas for Improvement
+  - More visuals
+  - Make the rod follow the mouse faster
+  - Most of the errors are visuals and not many errors that break the game.
+Recommendations for Dev Team
+Important Fixes (Priority 2)
+  - No lose condition
+Polish/Optional Fixes (Priority 3)
+  - Game does not start at round 1
+  - Make fish no longer fly off the screen
+  - Know the weight of the fish
+
+Test Environment
+Platform: PyGame
+Game Version: 2/9/2026
+Testing Tools: Manual testing + GitHub Issues
+
+All GitHub Issues
+Total: [11]
+Conclusion
+The game has 4 documented issues ranging from critical to cosmetic. With focused effort on critical bugs, the core gameplay loop is playable. Cosmetic issues are the biggest problem. One of the main features of the game not yet implemented is the shop and lastly, giving the player consequences if not gaining enough fish to feed the shark. Can’t wait to see the finished product.
+Errors from git hub:
+  - Limited graphics
+  - There is no multiplayer
+  - Limited movements & catch limit
+  - Sandbox execution
+  - No level design/simple gameplay
+  - No (current) ending
+  - Round sysetem not implemented yet
+
+QA Team Sign-Off
+Test Lead: Afton Pate
+Submitted: 2/11/26
+Team Members: Angel, Christopher, Afton, Marcus
+
+Appendix: Detailed Test Scenarios
+Scenario 1: [Play as normal and catch fish]
+Result: [Partial]
+Notes: The game ran as normal but it started in round 2 instead of 1.
+
+Scenario 2: [play with the mouse not on the game]
+Result: [Passed]
+Notes: The game does not play as normal without the cursor input.
+
+Scenario 3: [Play without catching any fish]
+Result: [Passed]
+Notes: No pounds are added if you catch no fish and the fish count does not go up.
+
+Questions for Dev Team (If Applicable)
+If there were ambiguities in how the game should work, note them here so dev team can clarify in Week 7: 
+  - Are yall able to increase the seep the rod move so it follow the cursor
+________________________________________________________________________________________________________________________________________________________________________________
+Game Tested: Echo Of Terminal 7
+Dev Team: Nayan, Khani Gauhar, Quint - Q456lm/sprint1
+QA Team: [Angel, Afton, Christopher, Marcus]
+Testing Period: Week 2 
+Report Date: 2/10/2026
+
+Executive Summary
+Over 2 days we conducted a comprehensive QA testing of the game Christopher. Our team tested all core features and found a total of 4 issues.
+
+Key Finding: All puzzles but one do not work as intended.
+
+Testing Overview
+What We Tested
+  Happy path (normal gameplay) ✓
+  Input validation & edge cases ✓
+    - Spammed input
+    - Tested random characters
+  Win/lose conditions ✓
+    - Tested failing puzzles
+  State management ✓
+  Complex scenarios & sequences ✓
+
+Coverage Summary
+Features Tested:
+  - Room exploration (2D) 90%
+  - Intractable environment 95% 
+  - Mini games & Boss fights 45% (Never got to a boss fight)
+Test Types:
+  Functional testing (does it work?)
+    - Yes
+  Negative testing (what breaks it?)
+    - Out of bounds input
+    - Spamming
+  Boundary testing (edge values)
+    - Out of bounds input
+    - spamming
+  Exploratory testing (creative scenarios)
+    - Failing puzzles to see if they reset or soft lock you
+
+Bug Summary
+By Severity
+Critical: [2] bugs 
+  - Admin puzzle does not accept correct password
+  - Power grid puzzle is impossible to beat
+High: [1] bugs 
+  - Bio-lab puzzle is already completed upon starting the game
+Medium: [0] bugs
+Low: [1] bugs 
+  - Two inputs needed to start the game 
+Total Bugs Filed: [4]
+
+By Category
+  Input Validation: [1] bugs
+  Logic Errors: [1] bugs
+  State Management: [1] bugs
+  UI/UX Issues: [1] bugs
+  Other: [0] bugs
+
+Critical Issues (Must Fix Before Handoff)
+  - Admin puzzle does not accept correct password
+  - Power grid puzzle is impossible to beat
+High-Priority Issues (Fix ASAP)
+  - Bio-lab puzzle is already completed upon starting the game
+Medium & Low Priority Issues
+  - Two inputs needed to start the game
+
+Testing Insights
+What Worked Well
+  - Graphics
+  - Explorable environment
+Areas for Improvement
+  - Puzzles
+Patterns Noticed
+  - Bugs did not seem to cluster
+
+Recommendations for Dev Team
+Critical Fixes (Priority 1)
+  - Admin puzzle does not accept correct password
+  - Power grid puzzle is impossible to beat
+Important Fixes (Priority 2)
+  - Bio-lab puzzle is already completed upon starting the game
+Polish/Optional Fixes (Priority 3)
+  - Two inputs needed to start the game 
+
+Test Environment
+Platform: Pygame
+Game Version: 2/9/2026
+Testing Tools: Manual testing + GitHub Issues
+
+All GitHub Issues
+Complete list of filed bugs: See dev team repo for all open GitHub Issues tagged qa-week6
+
+Total: 2
+Bellow was taken directly from their KNOWN_ISSUES.md
+
+Bug 1: Boss Room End State UI Not Rendering Severity: Critical Description: Upon completing the Boss Room encounter (either by eliminating the swarm or dying), the game state transitions to win or game_over, but the text overlays ("ALL ENTITIES ELIMINATED" or "CONSUMED BY THE SWARM") defined in BossRoom.draw do not appear. The player is left on the fight screen with no feedback. Repro Steps: 1. Launch the game and navigate to the Boss Room. 2. Defeat all 15 HerdMember enemies to trigger the win condition, OR allow player HP to drop to 0. 3. Observe that the specific victory/defeat text and background dimming do not render. Status: Fixed 
+
+Bug 2: Botany Room Simulation Diagrams Invisible Severity: Major Description: The moving particle simulations ("diagrams") inside tanks A, B, and C in the Botany Room are not visible. While the sim_particles logic appears to update positions for bouncing, swarming, and circling behaviors, the pygame.draw.circle calls are not producing visible output on the tank surfaces, making the puzzle unsolvable. Repro Steps: Enter the Botany Room from the Hub. Inspect the three containment tanks (A, B, C). Attempt to identify the "Organized Intelligence" pattern. Note that the tanks appear empty despite the simulation code running. Status: Fixed
+
+Conclusion
+The game has 4 documented issues ranging from critical to cosmetic. With focused effort on critical bugs, the core gameplay loop is NOT playable. All individual puzzles need the most attention.
+
+QA Team Sign-Off
+Test Lead: Aften Pate
+Submitted: 2/11/2026
+Team Members: Christopher, Afton, Angel, Marcus
+
+Appendix: Detailed Test Scenarios
+Scenario 1: Testing the Up/Down puzzle
+Result: [Passed]
+Notes: At least one puzzle works. GUI buttons work
+
+Scenario 2: Testing the wrong password in the admin terminal
+Result: [Failed]
+Notes: This means there is some check for the correct password. (or it just does not accept any passwords)
+
+Questions for Dev Team (If Applicable)
+If there were ambiguities in how the game should work, note them here so dev team can clarify in Week 7:
+  - No ambiguities
+________________________________________________________________________________________________________________________________________________________________________________
+Game Tested: Black Jack
+Dev Team: Samuel, Jessica, Karan, Maxwell - mcnoffersinger/BlackJack
+QA Team: [Angel, Afton, Christopher, Marcus]
+Testing Period: Week 2 
+Report Date: 2/11/2026
+
+Executive Summary
+Over 2 days we conducted a comprehensive QA testing of the game Black Jack. Our team tested all core features and found a total of 3 issues.
+
+Key Finding: Most bugs came from being able to bet money you did not have.
+
+Testing Overview
+What We Tested
+  - Betting all your money at the beginning
+  - Betting money we did not have
+  - Easy Vs Normal Vs Hard mode
+  - Russian mode
+Coverage Summary
+  Features Tested: [List core features and % coverage]
+  Stand or Hit: 80% tested
+  Full deck cards deal randomly: 95% tested
+  Customizable decks: 95% tested
+  Russian Mode: 90% tested
+  AI difficulty: 95% tested
+  Test Types: Visuals and functionality
+  Functional testing:
+    - Switching Ai modes
+    - Upgrading deck
+  Negative testing:
+    - Betting with no money
+  Boundary testing:
+    - Easy Ai Playing Vs Hard Ai Playing
+  Exploratory testing
+    - Russian Mode
+
+Bug Summary
+By Severity:
+High: [2] bugs 
+  - Unlimited Betting Money
+  - Russian mode soft locks the game into crashing
+medium: [0] bugs 
+  - None
+Low: [1] bugs 
+  - Minus button adds to bet and Add button subtracts
+Total Bugs Filed: [3]
+
+By Category:
+  Input Validation: [0] bugs
+  Logic Errors: [0] bugs
+  State Management: [1] bugs
+  UI/UX Issues: [1] bugs
+  Other: [1] bugs
+
+Critical Issues (Must Fix Before Handoff)
+  - Unlimited Betting Money
+High-Priority Issues (Fix ASAP)
+  - Russian mode soft locks the game into crashing
+  - Minus button adds to bet and Add button subtracts
+Medium & Low Priority Issues
+  - None
+
+Testing Insights
+What Worked Well
+  - The core gameplay worked very well. The AI mode was also good.
+Areas for Improvement
+  - Prevent users from betting money they don’t have (or make them take out a loan)
+  - Fix Russian mode to not crash
+Patterns Noticed
+  - Most of the errors stemmed from being able to bet money you don't have
+
+Recommendations for Dev Team
+Critical Fixes (Priority 1)
+  - Unlimited Betting Money
+Important Fixes (Priority 2)
+  - Russian mode soft locks the game into crashing
+  - Minus button adds to bet and Add button subtracts
+Polish/Optional Fixes (Priority 3)
+  - None
+
+Test Environment
+Platform: PyGame
+Game Version: 2/9/2026
+Testing Tools: Manual testing + GitHub Issues
+
+All GitHub Issues
+Complete list of filed bugs: See dev team repo for all open GitHub Issues tagged qa-week6
+
+Total: [10]
+
+These relate to the game.py file, including the UI issues and the code issues together
+  1. Incorrect Images for each card type - Resolved
+  2. Unable to bet amount - Resolved
+  3. Negative Betting Value - Resolved
+  4. UI formatting issues - Unresolved
+  5. UI overlapping of drop down boxes - Unresolved
+  6. Upgrade points don't work sometimes - Unresolved
+  7. The player sometimes starts with a value of 22, ending the game instantly. - Unresolved
+  8. Other game modes (Russian Blackjack) Don't work - Unresolved
+  9. Russian BlackJack Crashes game when you lose. - Unresolved
+  10. You can bet at 0 dollars, essentially creating 10 dollars out of thin air. - Unresolved
+
+Conclusion
+The game has [3] documented issues ranging from critical to cosmetic. With focused effort on critical bugs, the core gameplay loop is playable. Russian mode and infinite betting money is top priority.
+
+QA Team Sign-Off
+Test Lead: Afton Pate
+Submitted: 2/11/26
+Team Members: Angel, Christopher, Afton, Marcus
+
+Appendix: Detailed Test Scenarios
+Scenario 1: [Play a normal game]
+Result: [Partial]
+Notes: The game seems to be capable of running but the win/lose results are not fully qualified.
+
+Scenario 2: [Betting $10 when my balance is $0]
+Result: [Passed]
+Notes: This means there is no check to see whether or not you have money to bet with.
+
+Scenario 3: [Getting 22 points ]
+Result: [Passed]
+Notes: the edge case for a blackjack (21) 
+
+Questions for Dev Team (If Applicable)
+If there were ambiguities in how the game should work, note them here so dev team can clarify in Week 7: 
+  - Make Russian mode play the anthem of the USSR really really loud
