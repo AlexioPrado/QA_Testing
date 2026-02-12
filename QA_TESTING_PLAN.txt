@@ -14,13 +14,12 @@ Core Mechanics:
 
 Win Condition: 
   - Beat the final boss and make it past floor 30
-
 Lose Condition: 
   - Die in a battle or quit
+Player Inputs:
+  - 0-9, and specific text input (EX: Continue YES or NO, Input: “NO”)
 
-Player Inputs: 0-9, and specific text input (EX: Continue YES or NO, Input: “NO”)
-
-Testing Strategy -
+Testing Strategy
 Tuesday: 
 Goal: Define all probable bugs, test three bugs, then move on so we can get to the other games
 Test Scenarios: 
@@ -37,23 +36,13 @@ Known: issue found today:
 Wednesday:
 Goal: Define all complex bugs
 Test Scenarios: 
-Non-stop complex chained actions
+  - After attempting to use moon blessing following text is shaded incorrectly
+  - Attempting to use an item you don't have (like 4) crashes
+  - Setting a faster text speed makes dialogue slower
 Known: issue found today:
-
-Thursday:
-Goal: Continue defining all complex bugs
-Test Scenarios:  
-Non-stop complex chained actions
-Known: issue found today:
-
-Friday:
-Goal: Record all bugs
-Test Scenarios: None
-Known: issue found today:
-
-Bug Categories
-By Severity
-By Type
+  - After attempting to use moon blessing the actions are a darker shade of gray instead of the white it usually is.
+  - When using an item if you input a number out of range for valid items it crashes
+  - After setting text speed to a higher number like 200 dialogue becomes way slower
 
 Summary Table
 ( Have to insert an image)
@@ -66,15 +55,18 @@ Assumptions: None
 Recommendations for Dev Team
 Critical bugs to fix first:
   - Negative text speed crashes the game
+  - Using an item out of range crashes the game
 High-priority fixes:
   - Spamming valid inputs while text is being written causes prolonged inputs after text stops writing.
 
 Nice-to-have fixes: 
-Invalid number inputs on the start menu cause the game to jump straight into the game. Undesired behavior.
+  - Invalid number inputs on the start menu cause the game to jump straight into the game. Undesired behavior
+  - Using moon blessing sets text to wrong shade of gray
+  - High text speed makes dialogue speed extremely slow
 
 Testing completed by: Christopher
 
-Date submitted: 2/13/2025
+Date submitted: 2/12/2026
 ____________________________________________________________________________________________________________
 Game Being Tested: Fshng
 Dev Team: Evan Yango, Marcus Ceradini, Bianca Baccay, Ayah Abdalla, Maddy Puryear, 
@@ -83,13 +75,13 @@ Date: 2/10/2026
 Game Type: Fishing Arcade
 
 Core Mechanics:
-  - None listed
+  - None listed!
 
 Win Condition: 
   - Get the highest score and feed as much sharks as possible
 Lose Condition: 
   - Fail to get the required amount of fish
-Player Inputs: Mouse Left  Click, Mouse
+Player Inputs: Mouse Left/Right Click
 
 Testing Strategy -
 Tuesday: 
@@ -104,23 +96,10 @@ Known: issue found today:
   - Repeatedly catching no fish does not yield a loss. Unintended behavior
 
 Wednesday:
-Goal:
-Test Scenarios: 
+Goal: Test for extra bugs
+Test Scenarios: Visual work correctly
 Known Issues:
-
-Thursday:
-Goal: 
-Test Scenarios:
-Known Issues:
-
-Friday:
-Goal:
-Test Scenarios:
-Known Issues:
-
-Bug Categories
-By Severity
-By Type
+  - We don’t know the weight of the fish so we cant make sure the pound are calculated correctly
 
 Summary Table
 
@@ -130,18 +109,16 @@ Any blockers or issues with the game code itself? None
 Assumptions: None
 
 Recommendations for Dev Team -
-Critical bugs to fix first:
-  - N/A
 High-priority fixes:
   - No lose condition
 Nice-to-have fixes: [Lower priority issues]
   - Start at round 1
   - Make fish no longer fly off the screen
+  - Know the weight of the fish
 
 Testing completed by: Christopher Markham
 
-Date submitted:2/13/2025
-
+Date submitted:2/12/2026
 ____________________________________________________________________________________________________________
 Game Being Tested: Echo of Terminal 7
 Dev Team: Nayan, Khani Gauhar, Quint - Q456lm/sprint1
@@ -159,47 +136,28 @@ Win Condition:
 
 Lose Condition: 
   - None/Exit the game
-Player Inputs: WASD, Up, Left, Down, Right, E, Mouse Left Click, ESC
+Player Inputs:
+  - WASD, Up, Left, Down, Right, E, Mouse Left Click, ESC
 
-Testing Strategy -
+Testing Strategy
 Tuesday: 
 Goal: Define all probable bugs, test three bugs, then move on so we can get to the other games
 Test Scenarios: 
   - The green button on the power grid puzzle is unclickable
-   -Bio-Lab puzzle is completed upon starting the game
+  - Bio-Lab puzzle is completed upon starting the game
   - Admin Console password does not work
 Known: issue found today:
   - In the power grid puzzle, you can’t select the green box.
   - The bio-lab puzzle starts complete,d meaning you can't solve it.
   - Inputting the correct password, “They are in the herd.” does not do anything, making the puzzle unsolvable
 
-
-Wednesday:
-Goal:
-Test Scenarios: 
-Known Issues:
-
-Thursday:
-Goal: 
-Test Scenarios:
-Known Issues:
-
-Friday:
-Goal:
-Test Scenarios:
-Known Issues:
-
-Bug Categories
-By Severity
-By Type
-
 Summary Table
 ( Have to insert an image)
 
 Notes
 Testing Environment: Pygame
-  - Any blockers or issues with the game code itself? None
-Assumptions: [Anything unclear about how the game should work? Note it for dev team] None
+Any blockers or issues with the game code itself? None
+Assumptions: None
 
 Recommendations for Dev Team
 Critical bugs to fix first:
@@ -207,14 +165,12 @@ Critical bugs to fix first:
   - Make the green button in the power grid able to be clicked
 High-priority fixes:
   - Make it so the bio-lab puzzle does not start completed and must be solved by the user
-Nice-to-have fixes: [Lower priority issues]
+Nice-to-have fixes:
 -   An input to skip the loading of the start text and another input to start. This avoids accidentally skipping straight to the game.
 
 Testing completed by: Christopher Markham
 
-Date submitted: 2/13/2025
-
-
+Date submitted: 2/12/2026
 ____________________________________________________________________________________________________________
 Game Being Tested: BlackJack
 Dev Team: Samuel, Jessica, Karan, Maxwell - mcnoffersinger/BlackJack
@@ -243,55 +199,33 @@ Lose Condition:
 
 Player Inputs: User will only use their mouse clicker to make decisions during the game.
 
-Testing Strategy -
+Testing Strategy
 Tuesday: 
 Goal: Define all probable bugs, test three bugs, then move on so we can get to the other games
 Test Scenarios: 
   - No check to prohibit bets if you have no money
   - No money makes the minus button add $10 to the bet.
-Spamming the hit or stand button when in Russian mode closes the game
+  - Spamming the hit or stand button when in Russian mode closes the game
 Known: issue found today:
   - When you have no money, you can still bet.
   - When you have no money, clicking the minus on the bet sets the bet to $10, thus increasing the bet. After this, clicking the plus button reverts the bet back to $0, thus decreasing the bet.
-Selecting Russian mode and spamming the hit or stand button causes the game to close. This soft-locks you.
-
-Wednesday:
-Goal:
-Test Scenarios: 
-Known Issues:
-
-Thursday:
-Goal: 
-Test Scenarios:
-Known Issues:
-
-Friday:
-Goal:
-Test Scenarios:
-Known Issues:
-
-Bug Categories
-By Severity
-By Type
+  - Selecting Russian mode and spamming the hit or stand button causes the game to close. This soft-locks you.
 
 Summary Table
 ( Have to insert an image)
 
 Notes
 Testing Environment: Pygame
-Any blockers or issues with the game code itself? [If the game won't run, note it here]
-Assumptions: [Anything unclear about how the game should work? Note it for the dev team]
+Any blockers or issues with the game code itself? None
+Assumptions: None
 
 Recommendations for Dev Team
 Critical bugs to fix first:
-Betting on Russian mode soft locks you, as any repeated input will crash the game.
-
-High-priority fixes:
-
+  - Betting on Russian mode soft locks you, as any repeated input will crash the game.
 Nice-to-have fixes: [Lower priority issues]
-Make it so you can’t bet money you don't have.
-Make it so that when you have no money, you can’t set the bet to $10 by clicking the minus bet button.
+  - Make it so you can’t bet money you don't have.
+  - Make it so that when you have no money, you can’t set the bet to $10 by clicking the minus bet button.
 
 Testing completed by: Christopher Markham
 
-Date submitted: 2/13/2025
+Date submitted: 2/12/2026
