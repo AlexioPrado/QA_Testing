@@ -50,3 +50,79 @@ Test Lead Notes:
     - When you have no money, you can still bet. (Severity: N/A, Priority: N/A)
     - When you have no money, clicking the minus on the bet sets the bet to $10, thus increasing the bet. After this, clicking the plus button reverts the bet back to $0, thus decreasing the bet. (Severity: N/A, Priority: N/A)
     - Selecting Russian mode and spamming the hit or stand button causes the game to close. This soft-locks you. (Severity: N/A, Priority: N/A)
+
+STANDUP NOTES — Sprint pt.2 Day 2 (Feb 11th, Wednesday)
+
+Attendance:
+- Afton — PRESENT(2nd Period)
+- Chris — PRESENT  
+- Angel — PRESENT  
+- Marcus — PRESENT
+  
+Stand up:
+Afton:
+- What I did: Completed Christofer testing and summary report
+- What I’m doing: Continue testing and writing summary report of Echo of Terminal 7
+- Blocked: None
+
+Christopher:
+- What I did: Completed Christofer &testing and summary report 
+- What I’m doing: Continue testing and writing summary report of Echo of Terminal 7
+- Blocked: None
+
+Angel:
+- What I did: Finalize Fshng Plan & Summary Report with newly found bugs
+- What I’m doing: Placing Summary reports into github
+- Blocked: None
+
+Marcus:
+- What I did: Finalize Fshng Plan & Summary Report with newly found bugs. Added new bugs for Christofer and completed testing and some of summary report
+- What I’m doing: Placing finalized content into github
+- Blocked: None
+
+Test Lead Notes: 
+- 4 Bugs Total
+- Bugs found:
+  - Christopher: The Rise of Mark-Ham
+    - After attempting to use moon blessing the actions are a darker shade of gray instead of the white it usually is.
+    - When using an item if you input a number out of range for valid items it crashes
+    - After setting text speed to a higher number like 200 dialogue becomes way slower
+  - Fshng
+    - We don’t know the weight of the fish so we cant make sure the pound are calculated correctly
+
+STANDUP NOTES — Sprint pt.2 Day 3 (Feb 12th, Thursday)
+
+Attendance:
+- Afton — PRESENT
+- Chris — PRESENT  
+- Angel — PRESENT  
+- Marcus — PRESENT
+  
+Stand up:
+Afton:
+- What I did:
+- What I’m doing:
+- Blocked:
+
+Christopher:
+- What I did:
+- What I’m doing: 
+- Blocked:
+
+Angel:
+- What I did:
+- What I’m doing:
+- Blocked:
+
+Marcus:
+- What I did: 
+- What I’m doing: 
+- Blocked:
+
+Test Lead Notes: 
+- 4 Bugs Total
+- Bugs found:
+  - Christopher: The Rise of Mark-Ham
+
+  - Fshng
+
